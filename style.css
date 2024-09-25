@@ -116,10 +116,54 @@ nav ul li a {
     font-size: 60px;
     margin: 0;
 }
-
 /* Hero End */
 
-/* Responsive Device small Device */
+/* card start */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    color: #fff;
+}
+
+.card img {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #666;
+}
+/* card end */
+
+/* responsive design medium device */
+@media (max-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive design small Device */
 @media (max-width: 640px) {
     nav {
         background: rgba(0, 0, 0, 0.5);
@@ -152,5 +196,9 @@ nav ul li a {
     }
     .hero .hero-items .hero-content h1 {
         font-size: 48px;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
